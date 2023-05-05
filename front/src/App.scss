@@ -1,0 +1,32 @@
+@import './styles/breakpoints';
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Ablation';
+  src: url('./fonts/AblationExtraBold.otf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/IntroRegular.otf');
+  font-weight: 400;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+.modal-cotnainer {
+  width: 400px;
+
+  &__big {
+    width: 600px;
+  }
+}
+
+@media (max-width: $screen-xll-min) {
+    .container {
+      width: 100%;
+    }
+}

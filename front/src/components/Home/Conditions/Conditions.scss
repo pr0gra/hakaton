@@ -1,0 +1,180 @@
+@import '../../../styles/breakpoints';
+
+.conditions {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 50px 0;
+
+    &__whoami,
+    &__rules {
+        flex: 1;
+    }
+
+    &__rules {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: inset 0px -5px 25px rgba(29, 161, 242, 0.35), inset 10px 10px 5px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 1000px;
+
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 35px;
+        padding-right: 30px;
+    }
+
+    &__text {
+        font-family: 'Intro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 140%;
+        color: #FFFFFF;
+    }
+
+    &__circle {
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: inset 0px -5px 25px rgba(29, 161, 242, 0.35), inset 10px 10px 5px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 50%;
+        padding: 15px;
+
+        &-icon {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__whoami {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__block {
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: inset 0px -5px 25px rgba(29, 161, 242, 0.35), inset 10px 10px 5px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 100px;
+        width: 550px;
+        padding: 50px 70px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__quest {
+        position: absolute;
+        padding: 20px;
+        -webkit-transform:translate3d(0,0,0);
+        z-index: -1;
+
+        & p {
+            color: white;
+            font-family: 'Ablation';
+        }
+
+        &_first {
+            top: -70px;
+            left: 80px;
+        }
+
+        &_second {
+            top: -50px;
+            right: 85px;
+        }
+
+        &_third {
+            bottom: -80px;
+            right: 150px;
+        }
+    }
+}
+
+@media (max-width: $screen-xll-min) {
+    .conditions {
+        flex-direction: column;
+        gap: 80px;
+
+        &__whoami,
+        &__rules {
+            flex: inherit;
+        }
+
+        &__rules {
+            width: 80vw;
+        }
+
+        &__text {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: $screen-md-min) {
+    .conditions {
+        flex-direction: column;
+        gap: 80px;
+
+        &__block {
+            width: 80vw;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__quest {
+            &_first {
+                top: -70px;
+                left: -20px;
+            }
+
+            &_second {
+                top: -50px;
+                right: 0px;
+            }
+
+            &_third {
+                bottom: -80px;
+                right: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .conditions {
+
+        &__block {
+            padding: 35px;
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        &__item {
+            gap: 12px;
+        }
+        &__circle {
+            padding: 10px;
+
+            &-icon {
+                width: 25px;
+                height: 25px;
+                aspect-ratio: 1 / 1;
+                transform: translateY(2px);
+            }
+        }
+    }
+}

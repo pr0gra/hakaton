@@ -1,0 +1,11 @@
+.orgbox {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: inset 0px -5px 25px rgba(29, 161, 242, 0.35), inset 10px 10px 5px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,34 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+
+    &__lable {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    &__interface {
+        background: rgb(167, 167, 167, 0.9);
+        border: 1px solid rgb(239, 239, 239);
+        backdrop-filter: blur(30px);
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px 15px;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../../styles/breakpoints';
+.ct {
+    &__title {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        color: #00FFE0;
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+    }
+}
+
+@media (max-width: $screen-xl-min) {
+    .ct {
+        &__content {
+            height: 40vh;
+            flex: inherit;
+        }
+    }
+}

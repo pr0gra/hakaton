@@ -1,0 +1,136 @@
+@import '../styles/breakpoints';
+
+.auth {
+    background: url('../assets/Bg/previewbg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 30px;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__inp-error {
+        color: red;
+        font-family: 'Ablation';
+        line-height: 100%;
+    }
+
+    &__title {
+        font-family: 'Ablation';
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 61px;
+        color: #FFFFFF;
+    }
+
+    &__hidden-btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &__body {
+        width: 20vw;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.12);
+        box-shadow: inset 0px -5px 25px rgba(29, 161, 242, 0.35), inset 10px 10px 5px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 50px 40px;
+    }
+
+    &__link {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #00FFE0;
+        text-align: right;
+    }
+
+    &__btn {
+        background: #FFD20C;
+        border-radius: 60px;
+        width: 100%;
+        padding: 10px 0;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        color: #000000;
+        cursor: pointer;
+        border: none;
+        transition: background .2s ease-in-out;
+
+        &:hover {
+            background: #9b8008;
+        }
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+}
+
+.signin {
+    &__signup-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: $screen-xll-min) {
+    .auth {
+        
+        &__body {
+            width: 350px;
+        }
+    }
+}
+
+@media (max-width: $screen-md-min) {
+    .auth {
+        &__title {
+            font-size: 50px;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .auth {
+        padding: 15px;
+        &__title {
+            font-size: 20px;
+        }
+        &__body {
+            width: 100%;
+        }
+    }
+    .signin {
+        &__signup-container {
+            flex-direction: column;
+        }
+    }
+}

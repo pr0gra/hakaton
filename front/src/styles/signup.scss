@@ -1,0 +1,70 @@
+@import './breakpoints';
+.signup {
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__link {
+        color: #fff
+    }
+
+    &__block {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__body {
+        width: 30vw;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        &-lable {
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            color: #FFFFFF;
+        }
+    }
+
+    &__btn {
+        width: max-content;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .signup {
+        &__body {
+            width: 50vw;
+        }
+    }
+}
+
+@media (max-width: $screen-lg-min) {
+    .signup {
+        &__body {
+            width: 80vw;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .signup {
+        &__container {
+            flex-direction: column;
+        }
+        &__body {
+            width: 100%;
+            margin: none;
+        }
+    }
+}

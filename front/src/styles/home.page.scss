@@ -1,0 +1,8 @@
+@import './breakpoints';
+@media (max-width: $screen-md-min) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

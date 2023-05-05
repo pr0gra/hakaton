@@ -1,0 +1,142 @@
+@import '../../../styles/breakpoints';
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+        font-family: "Ablation";
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #0f0f0f;
+        padding: 25px 30px;
+    }
+
+    &__title-container {
+        width: 100%;
+        padding-right: 15px;
+    }
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        transition: all .3s ease-in-out;
+        
+        &:hover {
+            background: #1a1a1a;
+        }
+
+        &_active {
+            transform: rotateZ(-45deg);
+        }
+    }
+
+    &__btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #00FFFF;
+    }
+
+    &__content {
+        background: #0f0f0f;
+        padding: 0 30px;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+
+        &_open {
+            max-height: 100px;
+            min-height: 100px;
+        }
+        &_close {
+            max-height: 0px;
+            min-height: 0px;
+            height: 0px;
+        }
+    }
+
+    &__text {
+        font-family: "Ablation";
+        font-size: 16px;
+        line-height: 20px;
+        color: #cecece;
+        height: 100%;
+    }
+}
+
+@media (max-width: $screen-lg-min) {
+    .dropdown {
+        &__content {
+            background: #0f0f0f;
+            padding: 0 30px;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+    
+            &_open {
+                max-height: 150px;
+                min-height: 150px;
+            }
+            &_close {
+                max-height: 0px;
+                min-height: 0px;
+                height: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-md-min) {
+    .dropdown {
+        &__content {
+            background: #0f0f0f;
+            padding: 0 30px;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+    
+            &_open {
+                max-height: 200px;
+                min-height: 200px;
+            }
+            &_close {
+                max-height: 0px;
+                min-height: 0px;
+                height: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .dropdown {
+        &__content {
+            background: #0f0f0f;
+            padding: 0 30px;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+    
+            &_open {
+                max-height: 300px;
+                min-height: 300px;
+            }
+            &_close {
+                max-height: 0px;
+                min-height: 0px;
+                height: 0px;
+            }
+        }
+    }
+}

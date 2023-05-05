@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+}
+body, #root {
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 1.2vh;
+	background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1b1b23;
+	border-radius: 2vh;
+	border: 3px solid #0a0a0a;
+}

@@ -1,0 +1,64 @@
+@import '../../../styles/breakpoints';
+
+.cc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+
+    &__cases {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__title {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        color: #00FFE0;
+        text-align: center;
+    }
+
+    &__case-title {
+        background: #A7A7A7;
+        border: 1px solid #EFEFEF;
+        padding: 10px 30px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background .2 ease-in-out;
+
+        &_active {
+            background: #00FFE0;
+            border-color: #00FFE0;
+        }
+    }
+
+    &__case-text {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: $screen-xl-min) {
+    .cc {
+        height: 60vh;
+        min-height: max-content;
+
+        &__cases {
+            gap: 10px;
+        }
+
+        &__case-text {
+            overflow-y: scroll;
+            height: 100%;
+            flex: inherit;
+        }   
+    }
+}

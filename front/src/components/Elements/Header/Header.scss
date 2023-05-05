@@ -1,0 +1,41 @@
+@import '../../../styles/breakpoints';
+
+.header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px;
+    z-index: 2;
+
+    &__logo {
+        width: 88px;
+        height: auto;
+    }
+
+    &__btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+
+        font-family: 'Ablation';
+        font-weight: 800;
+        font-size: 23px;
+        line-height: 22px;
+        color: #FFFFFF;
+        transition: color .2s ease-in-out;
+
+        &:hover {
+            color: #d4d4d4;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .header {
+        &__btn {
+            font-size: 16px;
+        }
+    }
+}

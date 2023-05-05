@@ -1,0 +1,79 @@
+@import '../../../styles/breakpoints';
+.preview {
+    height: 100vh;
+    background: url('../../../assets/Bg/previewbg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        font-family: 'Ablation';
+        font-weight: 800;
+        font-size: 91px;
+        line-height: 127.5%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &__btn {
+        background: #00FFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 60px;
+        padding: 15px 30px;
+        cursor: pointer;
+        border: none;
+        transition: background .2s ease-in-out;
+        text-decoration: none;
+
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 27px;
+        color: #000000;
+
+        &:hover {
+            background: #03aaaa;
+        }
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #FFFFFF;
+
+        &_gray {
+            color: #b8b8b8;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .preview {
+        gap: 10px;
+        width: 50%;
+        &__title {
+            font-size: 40px;
+        }
+        &__btn {
+            margin-top: 10px;
+            padding: 10px 25px;
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+
+        &__timer {
+            margin: 10px 0;
+        }
+    }
+}

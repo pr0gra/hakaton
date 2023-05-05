@@ -1,0 +1,139 @@
+@import '../../../styles/breakpoints';
+
+.tb {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+
+    &__title {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    &__link {
+        background: #00FFE0;
+        border-radius: 60px;
+        padding: 10px 30px;
+        width: max-content;
+
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+        height: 100px;
+        overflow-y: scroll;
+    }
+
+    &__item {
+        background: #A7A7A7;
+        border: 1px solid #EFEFEF;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+
+        &-btn {
+            background: #00FFE0;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+            padding: 10px 30px;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 22px;
+            transition: background .2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background: #06c7b0;
+            }
+        }
+    }
+
+    &__table {
+        width: 100%;
+
+        & tr:nth-child(2n) {
+            background: rgb(223, 223, 223, 0.5);
+        }
+
+        & tr {
+            background: rgb(223, 223, 223, 0.2);
+        }
+
+        &_withheader {
+            & tr:nth-child(1) {
+                background: rgb(15, 15, 15);
+            }
+        }
+    }
+
+    &__table tr th {
+        text-align: left;
+        padding: 10px 5px;
+        color: #fff;
+
+        &:first-child {
+            width: 30%;
+        }
+    }
+
+    &__red-btn {
+        background: red;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        color: #FFFFFF;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background: rgb(158, 29, 29);
+        }
+    }
+
+}
+
+@media (max-width: $screen-md-min) {
+    .tb {
+
+        &__table-container {
+            width: 100%;
+            overflow-x: scroll;
+
+            & table {
+                width: 200%;
+            }
+        }
+    }
+}

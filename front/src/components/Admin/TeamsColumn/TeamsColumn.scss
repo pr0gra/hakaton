@@ -1,0 +1,58 @@
+.tc {
+    display: flex;
+    width: 100%;
+    
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: auto;
+    }
+
+
+    &__teams {
+        background: #1b1b1b;
+        border-right: 2px solid rgb(56, 56, 56);
+        padding: 20px;
+    }
+
+    &__ateam {
+        width: max-content;
+        cursor: pointer;
+
+        & tr th {
+            text-align: left;
+            padding: 10px 5px;
+            color: #fff;
+            border: 1px solid #000;
+
+            &:first-child {
+                width: 30%;
+            }
+        }
+
+        & tr:nth-child(2n) {
+            background: rgb(223, 223, 223, 0.5);
+        }
+
+        & tr {
+            background: rgb(223, 223, 223, 0.2);
+        }
+
+        &_withheader {
+            & tr:nth-child(1) {
+                background: rgb(15, 15, 15);
+            }
+        }
+    }
+
+    &__team {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+.leader-row {
+    background: rgb(80, 80, 4) !important;
+}

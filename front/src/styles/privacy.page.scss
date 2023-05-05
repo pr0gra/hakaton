@@ -1,0 +1,87 @@
+@import './_breakpoints.scss';
+.privacy {
+    margin: 50px auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__title {
+        font-family: 'Ablation';
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 100%;
+        color: #FFFFFF;
+    }
+    &__text {
+        font-family: 'Inter';
+        font-size: 18px;
+        line-height: 150%;
+        color: #c8c8c8;
+    }
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__goback {
+        background: transparent;
+        border: none;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:hover .privacy__arrow {
+            stroke: #939393;
+        }
+    }
+    &__arrow {
+        stroke: #fff;
+        height: 100%;
+        width: 100%;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__sub-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #fff;
+    }
+    &__list {
+        height: 100%;
+        padding-left: 5vh;
+    }
+}
+
+@media (max-width: $screen-xl-min) {
+    .privacy {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: $screen-md-min) {
+    .privacy {
+        &__title {
+            font-size: 24px;
+        }
+        &__text {
+            font-family: 'Inter';
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .privacy {
+        &__header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
