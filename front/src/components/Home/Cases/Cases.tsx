@@ -36,7 +36,7 @@ function Cases() {
                                 <h2 className="cases__name">{item.name}</h2>
                                 <p className="cases__descript">{item.text}</p>
                             </div>
-                            <div className="cases__info">
+                            <div className="cases__info" style={{boxShadow: "none"}}>
                                 <h2 className="cases__name">Призы</h2>
                                 <p className="cases__descript">{item.first_place}</p>
                                 <p className="cases__descript">{item.second_place}</p>
